@@ -1,0 +1,23 @@
+# encoding: utf-8
+---
+recipe:
+  Rx: customize
+  args:
+    - schema=luna_pinyin
+    - model=hant
+  description: >-
+    Customize input schema to enable language model.
+    Requires Rime plugin librime-octagram.
+    Supported models:
+      - hant
+      - hans
+      - hant_char
+      - hans_char
+
+install_files: >-
+  # grammar.yaml
+
+patch_files:
+  ${schema:-luna_pinyin}.custom.yaml:
+    - patch/+:
+        __include: grammar:/${model:-hant}
