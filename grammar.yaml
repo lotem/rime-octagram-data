@@ -2,30 +2,33 @@ patch:
   __include: hant
 
 hant:
-  __include: translator_options
   grammar:
     language: zh-hant-t-essay-bgw
+  translator/contextual_suggestions: true
+  translator/max_homophones: 7
+  translator/max_homographs: 7
 
 hans:
-  __include: translator_options
   grammar:
     language: zh-hans-t-essay-bgw
+  translator/contextual_suggestions: true
+  translator/max_homophones: 7
+  translator/max_homographs: 7
 
 hant_char:
-  __include: translator_options
   grammar:
     language: zh-hant-t-essay-bgc
     collocation_max_length: 2
     collocation_min_length: 2
+  translator/contextual_suggestions: true
+  translator/max_homophones: 7
+  translator/max_homographs: 7
 
 hans_char:
-  __include: trasnlator_options
   grammar:
     language: zh-hans-t-essay-bgc
     collocation_max_length: 2
     collocation_min_length: 2
-
-translator_options:
   translator/contextual_suggestions: true
   translator/max_homophones: 7
   translator/max_homographs: 7
