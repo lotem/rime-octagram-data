@@ -2,24 +2,24 @@ patch:
   __include: hant
 
 hant:
-  _include: traslator_options
+  __include: translator_options
   grammar:
     language: zh-hant-t-essay-bgw
 
 hans:
-  _include: traslator_options
+  __include: translator_options
   grammar:
     language: zh-hans-t-essay-bgw
 
 hant_char:
-  _include: traslator_options
+  __include: translator_options
   grammar:
     language: zh-hant-t-essay-bgc
     collocation_max_length: 2
     collocation_min_length: 2
 
 hans_char:
-  _include: traslator_options
+  __include: trasnlator_options
   grammar:
     language: zh-hans-t-essay-bgc
     collocation_max_length: 2
