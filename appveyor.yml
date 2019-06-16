@@ -1,0 +1,35 @@
+skip_tags: true
+pull_requests:
+  do_not_increment_build_number: true
+
+version: '{branch} build {build}'
+
+init:
+  - git --version
+  - git config --global core.autocrlf true
+
+install:
+  - 'git checkout origin/hant -- "*.gram"'
+  - 'git checkout origin/hans -- "*.gram"'
+  - 'git reset -- "*.gram"'
+
+build_script:
+  - '"%ProgramFiles(x86)%"\NSIS\Bin\makensis.exe /DPACKAGE_BUILD=%APPVEYOR_BUILD_NUMBER% package.nsi'
+
+artifacts:
+  - path: octagram-data-1.0.0.$(appveyor_build_number).exe
+    name: octagram-data
+
+deploy:
+  - provider: BinTray
+    username: $(bintray_user)
+    api_key: $(bintray_api_key)
+    subject: rime
+    repo: weasel
+    package: data
+    version: 1.0.0.$(appveyor_build_number)
+    publish: true
+    override: false
+    explode: false
+    on:
+      branch: master
