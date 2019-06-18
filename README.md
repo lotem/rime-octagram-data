@@ -40,8 +40,6 @@ patch:
 Unix/Linux 環境下可以使用命令行工具安裝、配置語言模型。
 
 下載 [/plum/](https://github.com/rime/plum) 配置管理器；
-安裝 [`git-lfs`](https://git-lfs.github.com/)；
-保持網絡暢通，以訪問Git大文件存儲。
 
 傳承字：先取得配置文件及 `hant` 分支的數據文件，再裝配到方案；
 
