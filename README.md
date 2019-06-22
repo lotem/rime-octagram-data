@@ -18,7 +18,7 @@
 ### 小狼毫數據包安裝程序
 
 [下載](https://rime.im/download/#windows) 安裝「小狼毫」輸入法
-及 [語言模型數據包](https://bintray.com/rime/weasel/data)。
+及 [語言模型數據包](https://bintray.com/rime/weasel/data#files)。
 
 ### 修改配置文件
 
