@@ -60,3 +60,9 @@ bash rime-install lotem/rime-octagram-data:customize:schema=luna_pinyin,model=ha
 ```
 
 `model` 量輸入法的簡繁、字詞偏向，取 `hant`, `hans`, `hant_char`, `hans_char` 之一。
+
+## 測試
+
+各個國家有各個國家的國歌
+
+充滿希望的跋涉比到達目的地更能給人樂趣
