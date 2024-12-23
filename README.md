@@ -15,10 +15,16 @@
 
 ## 用法
 
-### 小狼毫數據包安裝程序
+[下載](https://rime.im/download/) 安裝 Rime 輸入法。
 
-[下載](https://rime.im/download/#windows) 安裝「小狼毫」輸入法
-及 [語言模型數據包](https://bintray.com/rime/weasel/data)。
+如果輸入法安裝程序未打包語言模型：
+
+  - 從本站下載配置文件 `grammar.yaml`，
+  - 下載 [`hant`](https://github.com/lotem/rime-octagram-data/tree/hant) 分支的
+    語言模型文件 `zh-hant-*.gram`（搭配傳統漢字爲主的詞典），
+  - 下載 [`hans`](https://github.com/lotem/rime-octagram-data/tree/hans) 分支的
+    語言模型文件 `zh-hans-*.gram`（搭配簡化字爲主的詞典），
+  - 把下載的數據文件放到 Rime 用戶文件夾。
 
 ### 修改配置文件
 
@@ -31,7 +37,8 @@ patch:
   __include: grammar:/hant
 ```
 
-若詞典是簡化字的，採用補丁 `grammar:/hans` ；
+若詞典是以簡化字爲主的，採用補丁 `grammar:/hans`。
+
 若輸入方案以打單字爲主，即依通常習慣會將詞組分成單字輸入，
 則使用補丁 `grammar:/hant_char` 或 `grammar:/hans_char` 。
 
